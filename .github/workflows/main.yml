@@ -3,9 +3,7 @@ name: Validate Stamps
 # pull_request_target runs with base-repo token so we can post PR comments
 # from fork PRs. We only process image files with Pillow — no user code runs.
 on:
-  pull_request_target:
-    branches: [main]
-    types: [opened, synchronize, reopened]
+  workflow_dispatch:
 
 permissions:
   contents: read
